@@ -1,45 +1,18 @@
-# ProjectTypeClassification
-Classify Project type with NLP and ML
+# SentimentAnalysisIMDb_TransformerFineTune
+Fine Tuning Transformer (DistilBert, but generic to other models) for MultiClass Text Classification (Sentimental Analysis over IMDb)
 
 ## 🤔 What is this?
-**Description:**  How to know the type of IT projects/contracts (Services) that have been carrying out in the Portuguese Public Administration?.
-In addition to project values, what type of projects have been developed and by whom? What is the competition and what type of services do they focus on? Strategic Digital Transformation Consulting; in Project Management/PMO; in Requirements Gathering/Analysis or Architecture; in Project Implementation; in Support/Maintenance; in Change Management; or in SaaS?
-It involves the research and design of Artificial Intelligence algorithms, namely Natural Language Processing (NLP) and Machine Learning (ML) that allow the extraction of relevant information, which convert textual data into vector spaces in order to be inputs into data models. ML that will classify each IT service project.
-
+**Description:**  The objective of this script is to fine tune DistilBERT (but generic to severall models) on the IMDb dataset to determine whether a movie review is positive or negative (label 0 "negative", 1 "positive").
 
 ## 📚 Data
 
-Data with the projects (to train the model and to apply the model) are in data dir.
- 
-We are using Project Descriptions from   Portuguese Public Administration site of Contract  aggregator dataset available at [base.gov Repository](https://https://www.base.gov.pt/base4).
+We are using IMDb data from datasets library Repository.
 
-Please bear in mind that this data has already been cleaned and processed: `ContratosAP_v10.0_All TrainPred`.
-
-Dataframe "DadosTreinoVal" has `751` rows of data to train and test.  Where each row has the following data-point:
-	
-    - Objeto do Contrato: Contract Object
-    		 
-    - Contrato (Tipo): Type of Contract
-    		 
-   
-Type of Contract to be able to classify IT project descriptions from Public Portuguese Administration into the following categories:		 
-		 
-     
-     - Digital Transformation (0)
-		 
-     - Project Management/PMO (1)
-		 
-     - Requirements Definition/Analysis/Architecture (2)
-		 
-     - Implementation (3)
-		 
-     - Support/Maintenance (4)
-		 
-     - Change Management (5)
-		 
-     - Licenses (6)
-		 
-     - SaaS (7)
+Where each row has the following data-point:
+  - label (0 negative, 1 positive)
+  
+  - text		 
+		  
 
 
 ##  🚀 Quick Install
